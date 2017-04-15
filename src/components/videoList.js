@@ -1,7 +1,12 @@
 angular.module('video-player')
-.controller('videoList', function ($scope, $window) {
-  $scope.videoList = $window.exampleVideoData
-  $scope.firstVideo = $window.exampleVideoData[0];
+.controller('videoListCtrl', function ($window) {
+  this.videos = $window.exampleVideoData;
+  this.firstVideo = $window.exampleVideoData[0];
+  this.onClick = (video) => {
+  	// this.firstVideo = $window.exampleVideoData[$index]
+  	console.log('WORDEDSSDFSD');
+  }
+
   //$scope.source = https://www.youtube.com/embed/ + 
   // console.log($scope.$index)
 })
@@ -9,10 +14,10 @@ angular.module('video-player')
   return {
     // TODO
     restrict: 'E',
-    // controllerAs: 'ctrl',
+    controller: 'videoListCtrl',
+    controllerAs: 'ctrl',
     // bindToController: true,
-    scope: {videoList: '<'},
-    controller: 'videoList',
+    // scope: {videoList: '<'},
     scope: { },/////////////////////////////////////
     templateUrl: 'src/templates/videoList.html'
   };

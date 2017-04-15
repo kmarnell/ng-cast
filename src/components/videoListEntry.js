@@ -3,7 +3,7 @@ angular.module('video-player')
   return {
     // TODO
     // restrict: 'E',
-    // controllerAs: 'ctrl',
+    controllerAs: 'ctrl',
     // bindToController: true,
     // controller: 'videoList',
     templateUrl: 'src/templates/videoListEntry.html',
